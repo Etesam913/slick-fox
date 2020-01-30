@@ -1,0 +1,597 @@
+
+/* funcionando melhor */
+
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+* { 
+/* -------------------- 🎨 Customization 🎨 -------------------- */
+    --tab-corner-rounding: 5px;
+    --animation-speed: 0.4s;
+    --button-corner-rounding: 30px;
+}
+
+
+
+
+#TabsToolbar .tabbrowser-tab,
+
+#TabsToolbar .tabbrowser-tab .tab-stack,
+#TabsToolbar .tabbrowser-tab .tab-background,
+#TabsToolbar .tabbrowser-tab .tab-content {
+       border-top-left-radius: 10px !important;
+       border-top-right-radius: 10px !important;
+       margin-top: 4px;
+    height: 36px;
+    text-align: center;
+    
+}
+
+
+#TabsToolbar:hover{
+    background: transparent;
+}
+
+#TabsToolbar .{
+    padding-bottom: 30px;
+}
+
+
+.tab-line {
+      display: none;
+ }
+
+tab:not(:active) .tab-background {
+    transition: background-color var(--animation-speed) !important;
+}
+/* deixar a aba ativa em destaque e o resto desfocado */
+:root:not([customizing]) :hover > .tabbrowser-tab:not(:hover){
+    filter: blur(3px) brightness(50%);
+    transition: blur, ease 0.5s !important;
+
+}
+
+
+:root:not([customizing]) :not(:hover) > .tabbrowser-tab{
+    filter: blur(0px) brightness(100%) !important;
+    transition: blur, ease 0.2s !important;
+
+}
+
+/* sumir com o nome da aba depois de um tempo */
+
+
+#tabbrowser-tabs .tab-label-container[customizing]{
+    color: transparent;
+    transition: ease 0.5s;
+    transition-delay: 3s;
+}
+
+
+:root:not([customizing]) :hover > #tabbrowser-tabs,
+:root:not([customizing]) #tabbrowser-tabs:focus-within,
+#urlbar[focused="true"],
+#identity-box[open="true"],
+#navigator-toolbox:hover > #tabbrowser-tabs:not([customizing]),
+#toolbar-menubar:not([inactive="true"]) ~ #tabbrowser-tabs:not([customizing]) {
+    color: rgb(0, 0, 0) !important;
+    transition: linear 0s;
+    transition-delay: 3s;
+}
+
+
+:root[uidensity="compact"] {
+    --tab-min-height: 38px !important;
+
+}
+
+tab:not([selected]):hover .tab-background {
+   background-color: var(--toolbarbutton-hover-background, rgba(182, 182, 182, 0.11)) !important;
+
+}
+
+.tab-close-button{
+    list-style-image: url("active_close.png");
+    border-radius: 15px;
+    transition: list-style-image var(--animation-speed) ease-out !important;
+
+}
+.tab-close-button:hover {
+    list-style-image: url("mouseover_close.png");
+    
+}
+
+
+
+
+/* Removal of black bottom 1px line */
+#navigator-toolbox::after {
+    display: none !important;
+    
+}
+
+
+/*-min max close  buttons size */
+/* adapt size to your needs */
+.titlebar-button>.toolbarbutton-icon {
+	height: 17px !important;
+	min-height: 17px !important;
+	width: 17px !important;
+	min-width: 17px !important;
+}
+
+/* spaces between buttons */
+.titlebar-button {
+	padding-left: 10px !important;
+	padding-right: 15px !important;
+   padding-top: 10px !important;
+}
+
+
+
+
+/* barra url e de pesquisa*/
+
+#urlbar {
+    border-radius: calc(1px + var(--button-corner-rounding)) !important;
+    height: 30px;
+    margin-left: 5px;
+}
+
+
+
+
+/* style address bar */
+#urlbar-container *:not(#identity-box) {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#pageActionSeparator {
+    display: none !important;
+}
+
+.urlbar-icon, .urlbar-icon image, #userContext-indicator, #userContext-label {
+    fill: transparent !important;
+    background-color: transparent !important;
+    color: transparent !important;
+    transition: var(--animation-speed) !important;
+}
+
+
+#urlbar:hover .urlbar-icon,
+#urlbar:active .urlbar-icon, 
+#urlbar[focused] .urlbar-icon,
+#urlbar:hover .urlbar-icon:not([open]) image,
+#urlbar:active .urlbar-icon image, 
+#urlbar[focused] .urlbar-icon image {
+    fill: var(--toolbar-color) !important;
+}
+
+#urlbar:hover #userContext-indicator,
+#urlbar:active #userContext-indicator, 
+#urlbar[focused] #userContext-indicator,
+#urlbar:hover #userContext-label,
+#urlbar:active #userContext-label, 
+#urlbar[focused] #userContext-label {
+    color: var(--identity-tab-color) !important;
+    fill: var(--identity-tab-color) !important;
+}
+
+.urlbar-page-action[open] {
+    background-color: var(--toolbarbutton-active-background) !important;
+    fill: var(--toolbar-color) !important;
+}
+
+.urlbar-page-action[open]:hover {
+    background-color: var(--toolbarbutton-active-background) !important;
+    fill: var(--toolbar-color) !important;
+}
+
+.urlbar-page-action[open] .urlbar-icon {
+    fill: var(--toolbar-color) !important;
+}
+
+
+#library-button[animate] {
+    margin-bottom: 0px !important;
+    margin-top: 50px !important;
+}
+
+#library-button[animate] image {
+    margin-bottom: -120px !important;
+    margin-top: 100px !important;
+}
+
+
+
+
+.urlbar-scheme {
+    padding-bottom: 11px !important;
+}
+
+
+#urlbar-container {
+    margin-left: -5px !important;
+    margin-right: 2px !important;
+}
+
+#urlbar-container #urlbar[pageproxystate="invalid"] {
+    margin-left: 5px !important;
+}
+
+.urlbar-input-box {
+    padding: 5px 5px !important;
+}
+
+#urlbar {
+    background-color: transparent !important;
+    color: var(--lwt-toolbar-field-color, black) !important;
+}
+
+
+#urlbar:not(.hidden-focus)[focused="true"] {
+    background-color: rgba(255, 255, 255, 0.164) !important;
+}
+
+#pocket-button {
+    padding-bottom: 4px !important;
+}
+
+.urlbar-icon-wrapper > .urlbar-icon:hover {
+    background-color: transparent !important;
+}
+
+.urlbar-icon-wrapper {
+    background-color: transparent !important;
+    transition: background-color var(--animation-speed) !important;
+}
+
+
+
+#urlbar:not([focused]) .urlbar-input-box:hover,
+#identity-box:hover, 
+.urlbar-icon:hover,
+.urlbar-icon-wrapper:hover,
+[anonid=urlbar-go-button]:hover {
+    border-radius: 10px !important;
+}
+
+
+#identity-box:active,
+.urlbar-icon:active,
+.urlbar-icon-wrapper:active,
+[anonid=urlbar-go-button]:active {
+    background-color: var(--toolbarbutton-active-background) !important;
+}
+
+.urlbar-input-box, 
+#identity-box,
+[anonid=urlbar-go-button],
+#urlbar {
+    font-size: 1.3rem;
+    font-family: "Airbnb Cereal App Book";
+    transition: background-color var(--animation-speed) !important;
+    color: var(--toolbar-color) !important;
+
+}
+
+[lwthemetextcolor="dark"] .urlbarView-body-outer {
+    background-color: #FF5340 !important;
+    color: var(--toolbar-color) !important;
+}
+
+.urlbarView-body-inner {
+    background-color: var(--toolbar-bgcolor) !important;
+}
+
+.downloadsPanelFooterButton:hover {
+    outline: none !important;
+}
+
+
+
+
+
+
+
+
+/* pra alterar posição e altura do Minimizar maximizar e fechar */
+#TabsToolbar > .titlebar-buttonbox-container{
+
+   margin-right: 20px;
+
+}
+
+#urlbar,
+#searchbar {
+    border: none !important;
+}
+
+
+#page-action-buttons>*:not(#star-button-box),
+.urlbar-history-dropmarker {
+    opacity: 0 !important;
+}
+
+#urlbar:hover #page-action-buttons>*,
+#urlbar:hover .urlbar-history-dropmarker {
+    opacity: 1 !important;
+}
+
+/* menu de contexto*/
+
+
+menu,
+menuitem, 
+menucaption {
+    -moz-appearance: none !important;
+    height: 36px !important;
+    color: black;
+
+}
+
+
+menu[disabled="true"][_moz-menuactive="false"], 
+menuitem[disabled="true"][_moz-menuactive="false"], 
+menucaption[disabled="true"][_moz-menuactive="false"] {
+    color: white !important;
+}
+
+
+menu[disabled="true"], 
+menuitem[disabled="true"], 
+menucaption[disabled="true"] {
+    color: var(--toolbarbutton-hover-background, rgba(182, 182, 182, 0.11)) !important;
+}
+
+menu[disabled="true"][_moz-menuactive="true"], 
+menuitem[disabled="true"][_moz-menuactive="true"], 
+menucaption[disabled="true"][_moz-menuactive="true"] {
+   color: var(--toolbarbutton-hover-background, rgba(182, 182, 182, 0.11)) !important;
+   background-color: transparent !important;
+}
+
+menupopup .popup-internal-box {
+    background-color: #whitesmoke !important;
+}
+
+
+
+menu,
+menuitem, 
+menucaption {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+menu:not(.subviewbutton) > .menu-right  {
+    margin-top: 2px !important;
+    margin-right: 0px !important;
+    width: 0px !important;
+    
+}
+
+menu:not(.subviewbutton) > .menu-right image {
+    margin-right: -5px !important;
+    margin-top: -2px !important;
+    border: 6px solid var(--toolbar-color) !important;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+}
+
+
+
+@media (-moz-os-version: windows-xp), (-moz-os-version: windows-vista),
+(-moz-os-version: windows-win7), (-moz-os-version: windows-win8), (-moz-os-version: windows-win10) {
+
+    menupopup .popup-internal-box {
+        margin: -2px !important;
+        padding-bottom: 3px !important;
+        padding-top: 3px !important;
+        
+    }
+
+
+    .bookmark-item .scrollbutton-up {
+        margin-top: -3px !important;
+    }
+
+    .bookmark-item .scrollbutton-up > .toolbarbutton-icon {
+        margin-top: -2px !important;
+        border: 6px solid MenuText !important;
+        border-top-color: transparent !important;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+    }
+
+    .bookmark-item .scrollbutton-down {
+        margin-bottom: -3px !important;
+    }
+
+    .bookmark-item .scrollbutton-down > .toolbarbutton-icon {
+        margin-bottom: -2px !important;
+        border: 6px solid MenuText !important;
+        border-bottom-color: transparent !important;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+    }
+
+    menupopup {
+        margin-left: 1px !important;
+    }
+    
+    menu,
+    menuitem, 
+    menucaption {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        
+    }
+    
+    menu:not(.subviewbutton) > .menu-right  {
+        margin-right: 0px !important;
+        padding-left: 0px !important;
+        
+    }
+}
+
+/* tirar a caixinha antes das tabs*/
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+      display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root:-moz-lwtheme-brighttext {
+
+    --autocomplete-popup-background: #2A2A2E !important;
+    --autocomplete-popup-highlight-background: #FF5340 !important;
+}
+
+/* Removes white loading page */
+
+@-moz-document url(about:blank), url(about:newtab), url(about:home) {
+    html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+      background: black !important;
+    }
+  }
+  
+#tabs-newtab-button {
+   margin-top: 10px !important;
+   margin-left: 4px !important;
+   border-radius: 100% !important;
+}
+/* This removes the tab separators */
+.tabbrowser-tab::before,
+.tabbrowser-tab::after {
+    display: none !important;
+}
+
+.tab-background[selected=true] {
+  color: #111111 !important;
+}
+
+.tabbrowser-tab {
+    /* transition: color 0.25s !important; */
+    text-align: center !important;
+    /*display: inherit;*/
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.tab-icon-image {
+   
+}
+.tab-label {   
+   font-family: "Airbnb Cereal App Book";
+   
+   }
+.tabbrowser-tab[selected="true"], .tab-label-container[selected="true"] {
+  font-size: 1.1rem;
+  
+  /* background-color: var(--color3) !important; */
+  /* background-image: linear-gradient(var(--color3), var(--color3)) !important; */
+}
+
+/* fonte */
+
+
+menubar,
+menubutton,
+menulist,
+menu,
+menuitem,
+textbox,
+toolbar,
+tab,
+tree,
+.tree-rows {
+
+
+}
+
+/* hide navbar */
+#nav-bar:not([customizing]){
+	visibility: visible;
+	margin-top: -42px;
+   	transition-delay: 1s;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s !important;
+}
+
+
+
+/* 
+keep visible when urlbar is focused
+navbar is hovered
+or menubar/customization is open
+*/
+
+
+:root:not([customizing]) :hover > #nav-bar,
+#nav-bar:focus-within,
+#urlbar[focused="true"],
+#identity-box[open="true"],
+#navigator-toolbox:hover > #nav-bar:not([customizing]),
+#toolbar-menubar:not([inactive="true"]) ~ #nav-bar:not([customizing]) {
+	visibility: visible;
+	margin-top: 0;
+    filter: alpha(opacity=100);
+    opacity: 100;
+}
+
+#nav-bar .toolbarbutton-1[open="true"]{
+    
+    visibility: visible;
+    margin-top: 0px;
+    opacity: 100;
+}
+
+/* hide scrollbar  */
+
+:-moz-any(#content,#appcontent) browser{
+ margin-right:-17px!important;
+ overflow-y:scroll;
+ margin-bottom: 0px!important;
+ overflow-x:scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
