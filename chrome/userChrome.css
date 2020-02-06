@@ -59,6 +59,7 @@ tab:not(:active) .tab-background {
 #urlbar[focused="true"],
 #identity-box[open="true"],
 #navigator-toolbox:hover > #tabbrowser-tabs:not([customizing]),
+
 #toolbar-menubar:not([inactive="true"]) ~ #tabbrowser-tabs:not([customizing]) {
     color: rgb(0, 0, 0) !important;
     transition: linear 0s;
@@ -460,8 +461,8 @@ tree,
    	transition-delay: 1s;
     filter: alpha(opacity=0);
     opacity: 0;
-    scale: 0;
-    transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s, scale, ease 0.75s !important;
+    rotate: 20deg;
+    transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s, rotate, ease 0.4s !important;
 }
 
 
@@ -475,12 +476,12 @@ tree,
 #identity-box[open="true"],
 #navigator-toolbox:hover > #nav-bar:not([customizing]),
 #toolbar-menubar:not([inactive="true"]) ~ #nav-bar:not([customizing]) {
-	visibility: visible;
+   visibility: visible;
+   
 	margin-top: 0;
     filter: alpha(opacity=100);
     opacity: 100;
-    
-   scale: 100%;
+    rotate: 0deg;
 }
 
 #nav-bar .toolbarbutton-1[open="true"]{
