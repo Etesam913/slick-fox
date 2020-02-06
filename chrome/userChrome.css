@@ -1,19 +1,11 @@
 
-/* funcionando melhor */
-
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-
 * { 
-/* -------------------- 🎨 Customization 🎨 -------------------- */
     --tab-corner-rounding: 5px;
     --animation-speed: 0.4s;
     --button-corner-rounding: 30px;
 }
-
-
-
 
 #TabsToolbar .tabbrowser-tab,
 
@@ -37,7 +29,6 @@
     padding-bottom: 30px;
 }
 
-
 .tab-line {
       display: none;
  }
@@ -45,13 +36,11 @@
 tab:not(:active) .tab-background {
     transition: background-color var(--animation-speed) !important;
 }
-/* deixar a aba ativa em destaque e o resto desfocado */
 :root:not([customizing]) :hover > .tabbrowser-tab:not(:hover){
     filter: blur(3px) brightness(50%);
     transition: blur, ease 0.5s !important;
 
 }
-
 
 :root:not([customizing]) :not(:hover) > .tabbrowser-tab{
     filter: blur(0px) brightness(100%) !important;
@@ -59,15 +48,11 @@ tab:not(:active) .tab-background {
 
 }
 
-/* sumir com o nome da aba depois de um tempo */
-
-
 #tabbrowser-tabs .tab-label-container[customizing]{
     color: transparent;
     transition: ease 0.5s;
     transition-delay: 3s;
 }
-
 
 :root:not([customizing]) :hover > #tabbrowser-tabs,
 :root:not([customizing]) #tabbrowser-tabs:focus-within,
@@ -79,7 +64,6 @@ tab:not(:active) .tab-background {
     transition: linear 0s;
     transition-delay: 3s;
 }
-
 
 :root[uidensity="compact"] {
     --tab-min-height: 38px !important;
@@ -102,18 +86,11 @@ tab:not([selected]):hover .tab-background {
     
 }
 
-
-
-
-/* Removal of black bottom 1px line */
 #navigator-toolbox::after {
     display: none !important;
     
 }
 
-
-/*-min max close  buttons size */
-/* adapt size to your needs */
 .titlebar-button>.toolbarbutton-icon {
 	height: 17px !important;
 	min-height: 17px !important;
@@ -121,7 +98,6 @@ tab:not([selected]):hover .tab-background {
 	min-width: 17px !important;
 }
 
-/* spaces between buttons */
 .titlebar-button {
 	padding-left: 10px !important;
 	padding-right: 15px !important;
@@ -129,20 +105,12 @@ tab:not([selected]):hover .tab-background {
 }
 
 
-
-
-/* barra url e de pesquisa*/
-
 #urlbar {
     border-radius: calc(1px + var(--button-corner-rounding)) !important;
     height: 30px;
     margin-left: 5px;
 }
 
-
-
-
-/* style address bar */
 #urlbar-container *:not(#identity-box) {
     border-color: transparent !important;
     box-shadow: none !important;
@@ -158,7 +126,6 @@ tab:not([selected]):hover .tab-background {
     color: transparent !important;
     transition: var(--animation-speed) !important;
 }
-
 
 #urlbar:hover .urlbar-icon,
 #urlbar:active .urlbar-icon, 
@@ -204,9 +171,6 @@ tab:not([selected]):hover .tab-background {
     margin-top: 100px !important;
 }
 
-
-
-
 .urlbar-scheme {
     padding-bottom: 11px !important;
 }
@@ -249,7 +213,6 @@ tab:not([selected]):hover .tab-background {
 }
 
 
-
 #urlbar:not([focused]) .urlbar-input-box:hover,
 #identity-box:hover, 
 .urlbar-icon:hover,
@@ -290,14 +253,6 @@ tab:not([selected]):hover .tab-background {
     outline: none !important;
 }
 
-
-
-
-
-
-
-
-/* pra alterar posição e altura do Minimizar maximizar e fechar */
 #TabsToolbar > .titlebar-buttonbox-container{
 
    margin-right: 20px;
@@ -319,9 +274,6 @@ tab:not([selected]):hover .tab-background {
 #urlbar:hover .urlbar-history-dropmarker {
     opacity: 1 !important;
 }
-
-/* menu de contexto*/
-
 
 menu,
 menuitem, 
@@ -438,40 +390,16 @@ menu:not(.subviewbutton) > .menu-right image {
     }
 }
 
-/* tirar a caixinha antes das tabs*/
 .titlebar-spacer[type="pre-tabs"],
 .titlebar-spacer[type="post-tabs"] {
       display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 :root:-moz-lwtheme-brighttext {
 
     --autocomplete-popup-background: #2A2A2E !important;
     --autocomplete-popup-highlight-background: #FF5340 !important;
 }
-
-/* Removes white loading page */
 
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
     html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
@@ -484,7 +412,6 @@ menu:not(.subviewbutton) > .menu-right image {
    margin-left: 4px !important;
    border-radius: 100% !important;
 }
-/* This removes the tab separators */
 .tabbrowser-tab::before,
 .tabbrowser-tab::after {
     display: none !important;
@@ -495,9 +422,7 @@ menu:not(.subviewbutton) > .menu-right image {
 }
 
 .tabbrowser-tab {
-    /* transition: color 0.25s !important; */
     text-align: center !important;
-    /*display: inherit;*/
     justify-content: center;
     align-items: center;
     
@@ -513,12 +438,7 @@ menu:not(.subviewbutton) > .menu-right image {
 .tabbrowser-tab[selected="true"], .tab-label-container[selected="true"] {
   font-size: 1.1rem;
   
-  /* background-color: var(--color3) !important; */
-  /* background-image: linear-gradient(var(--color3), var(--color3)) !important; */
 }
-
-/* fonte */
-
 
 menubar,
 menubutton,
@@ -534,23 +454,19 @@ tree,
 
 }
 
-/* hide navbar */
 #nav-bar:not([customizing]){
 	visibility: visible;
 	margin-top: -42px;
    	transition-delay: 1s;
     filter: alpha(opacity=0);
     opacity: 0;
-    transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s !important;
+    scale: 0;
+    transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s, scale, ease 0.75s !important;
 }
 
 
 
-/* 
-keep visible when urlbar is focused
-navbar is hovered
-or menubar/customization is open
-*/
+
 
 
 :root:not([customizing]) :hover > #nav-bar,
@@ -563,6 +479,8 @@ or menubar/customization is open
 	margin-top: 0;
     filter: alpha(opacity=100);
     opacity: 100;
+    
+   scale: 100%;
 }
 
 #nav-bar .toolbarbutton-1[open="true"]{
@@ -570,9 +488,8 @@ or menubar/customization is open
     visibility: visible;
     margin-top: 0px;
     opacity: 100;
+    
 }
-
-/* hide scrollbar  */
 
 :-moz-any(#content,#appcontent) browser{
  margin-right:-17px!important;
@@ -580,18 +497,3 @@ or menubar/customization is open
  margin-bottom: 0px!important;
  overflow-x:scroll;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
