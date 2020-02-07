@@ -14,7 +14,7 @@
 #TabsToolbar .tabbrowser-tab .tab-content {
        border-top-left-radius: 10px !important;
        border-top-right-radius: 10px !important;
-       margin-top: 4px;
+       margin-top: 3px;
     height: 36px;
     text-align: center;
     
@@ -25,9 +25,7 @@
     background: transparent;
 }
 
-#TabsToolbar .{
-    padding-bottom: 30px;
-}
+
 
 .tab-line {
       display: none;
@@ -478,7 +476,7 @@ tree,
 #toolbar-menubar:not([inactive="true"]) ~ #nav-bar:not([customizing]) {
    visibility: visible;
    
-	margin-top: 0;
+	margin-top: -3px;
     filter: alpha(opacity=100);
     opacity: 100;
     rotate: 0deg;
