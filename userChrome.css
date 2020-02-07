@@ -15,7 +15,7 @@
        border-top-left-radius: 10px !important;
        border-top-right-radius: 10px !important;
        margin-top: 0px;
-    height: 36.5px;
+    height: 36px;
     text-align: center;
     
 }
@@ -454,7 +454,7 @@ tree,
 
 #nav-bar:not([customizing]){
 	visibility: visible;
-	margin-top: -42px;
+	margin-top: -40px;
    	transition-delay: 1s;
     filter: alpha(opacity=0);
     opacity: 0;
@@ -473,7 +473,7 @@ tree,
 	margin-top: 0px;
     filter: alpha(opacity=100);
     opacity: 100;
-   margin-bottom: -2px;
+   margin-bottom: -.2px;
     rotate: 0deg;
 }
 #PersonalToolbar {
@@ -482,7 +482,6 @@ tree,
 #nav-bar .toolbarbutton-1[open="true"]{
     
     visibility: visible;
-    margin-top: 0px;
     opacity: 100;
     
 }
