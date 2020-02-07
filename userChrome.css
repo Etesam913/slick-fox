@@ -14,8 +14,8 @@
 #TabsToolbar .tabbrowser-tab .tab-content {
        border-top-left-radius: 10px !important;
        border-top-right-radius: 10px !important;
-       margin-top: 3px;
-    height: 36px;
+       margin-top: 0px;
+    height: 36.5px;
     text-align: center;
     
 }
@@ -462,11 +462,6 @@ tree,
     rotate: 20deg;
     transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s, rotate, ease 0.4s !important;
 }
-
-
-
-
-
 
 :root:not([customizing]) :hover > #nav-bar,
 #nav-bar:focus-within,
