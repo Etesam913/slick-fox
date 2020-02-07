@@ -235,7 +235,7 @@ tab:not([selected]):hover .tab-background {
 [anonid=urlbar-go-button],
 #urlbar {
     font-size: 1.3rem;
-    font-family: "Airbnb Cereal App Book";
+    font-family: "Airbnb Cereal App Book", "Helvetica", "Arial";
     transition: background-color var(--animation-speed) !important;
     color: var(--toolbar-color) !important;
 
