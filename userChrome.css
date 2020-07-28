@@ -2,9 +2,13 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 * { 
-    --tab-corner-rounding: 5px;
+    /*--tab-corner-rounding: 5px;*/
     --animation-speed: 0.4s;
     --button-corner-rounding: 30px;
+    --urlbar-container-height: 34px !important;
+    --urlbar-height: 34px !important;
+    --urlbar-toolbar-height: 45px !important;
+    --moz-hidden-unscrollable: scroll !important;
 }
 
 #TabsToolbar .tabbrowser-tab,
@@ -105,7 +109,7 @@ tab:not([selected]):hover .tab-background {
 
 
 #urlbar {
-    border-radius: calc(1px + var(--button-corner-rounding)) !important;
+    /*border-radius: calc(1px + var(--button-corner-rounding)) !important;*/
     height: 30px;
     margin-left: 5px;
 }
@@ -135,6 +139,7 @@ tab:not([selected]):hover .tab-background {
     fill: var(--toolbar-color) !important;
 }
 
+
 #urlbar:hover #userContext-indicator,
 #urlbar:active #userContext-indicator, 
 #urlbar[focused] #userContext-indicator,
@@ -153,6 +158,11 @@ tab:not([selected]):hover .tab-background {
 .urlbar-page-action[open]:hover {
     background-color: var(--toolbarbutton-active-background) !important;
     fill: var(--toolbar-color) !important;
+}
+#urlbar[breakout] {
+  width: 100% !important;
+  padding: 0px !important;
+  z-index: 99 !important;
 }
 
 .urlbar-page-action[open] .urlbar-icon {
@@ -212,7 +222,7 @@ tab:not([selected]):hover .tab-background {
 }
 
 
-#urlbar:not([focused]) .urlbar-input-box:hover,
+#urlbar:not([focused]){ border-radius: 20px !important;}
 #identity-box:hover, 
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
@@ -327,7 +337,7 @@ menu:not(.subviewbutton) > .menu-right  {
 menu:not(.subviewbutton) > .menu-right image {
     margin-right: -5px !important;
     margin-top: -2px !important;
-    border: 6px solid var(--toolbar-color) !important;
+    /*border: 6px solid var(--toolbar-color) !important;*/
     border-top-color: transparent !important;
     border-right-color: transparent !important;
     border-bottom-color: transparent !important;
