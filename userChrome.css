@@ -39,13 +39,13 @@ tab:not(:active) .tab-background {
     transition: background-color var(--animation-speed) !important;
 }
 :root:not([customizing]) :hover > .tabbrowser-tab:not(:hover){
-    filter: blur(3px) brightness(50%);
+    /*filter: blur(3px) brightness(50%);*/
     transition: blur, ease 0.5s !important;
 
 }
 
 :root:not([customizing]) :not(:hover) > .tabbrowser-tab{
-    filter: blur(0px) brightness(100%) !important;
+    /*filter: blur(0px) brightness(100%) !important;*/
     transition: blur, ease 0.2s !important;
 
 }
@@ -204,9 +204,7 @@ tab:not([selected]):hover .tab-background {
 }
 
 
-#urlbar:not(.hidden-focus)[focused="true"] {
-    background-color: rgba(255, 255, 255, 0.164) !important;
-}
+
 
 #pocket-button {
     padding-bottom: 4px !important;
