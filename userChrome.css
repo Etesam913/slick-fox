@@ -165,6 +165,18 @@ tab:not([selected]):hover .tab-background {
   z-index: 99 !important;
 }
 
+#urlbar[breakout][breakout-extend] {
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: 100%!important;
+  padding-block: 0 !important;
+  padding-inline: 0 !important;
+}
+
 .urlbar-page-action[open] .urlbar-icon {
     fill: var(--toolbar-color) !important;
 }
@@ -203,7 +215,9 @@ tab:not([selected]):hover .tab-background {
     color: var(--lwt-toolbar-field-color, black) !important;
 }
 
-
+.urlbarView {
+  display: none !important;
+}
 
 
 #pocket-button {
