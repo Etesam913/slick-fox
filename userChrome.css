@@ -244,7 +244,7 @@ tab:not([selected]):hover .tab-background {
 [anonid="urlbar-go-button"],
 #urlbar {
   font-size: 1.3rem;
-  font-family: "Airbnb Cereal App Book", "Helvetica", "Arial";
+  font-family: "Airbnb Cereal App Book", "Arial", "Helvetica";
   transition: background-color var(--animation-speed) !important;
   color: var(--toolbar-color) !important;
 }
@@ -431,7 +431,7 @@ menu:not(.subviewbutton) > .menu-right image {
 .tab-icon-image {
 }
 .tab-label {
-  font-family: "Airbnb Cereal App Book";
+  font-family: "Airbnb Cereal App Book", "Arial", "Helvetica";
 }
 .tabbrowser-tab[selected="true"],
 .tab-label-container[selected="true"] {
