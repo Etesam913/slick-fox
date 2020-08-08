@@ -213,8 +213,12 @@ tab:not([selected]):hover .tab-background {
   color: var(--lwt-toolbar-field-color, black) !important;
 }
 
+
 .urlbarView {
-  display: none !important;
+  background: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
 }
 
 #pocket-button {
