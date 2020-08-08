@@ -5,8 +5,8 @@
   --animation-speed: 0.4s;
   --button-corner-rounding: 30px;
   --urlbar-container-height: 34px !important;
-  --urlbar-height: 34px !important;
-  --urlbar-toolbar-height: 45px !important;
+  --urlbar-height: 32px !important;
+  --urlbar-toolbar-height: 40px !important;
   --moz-hidden-unscrollable: scroll !important;
 }
 
@@ -27,6 +27,14 @@
 
 .tab-line {
   display: none;
+}
+
+#urlbar[breakout][breakout-extend],
+#urlbar[breakout][breakout-extend-disabled][open] {
+  /* The z-index needs to be big enough to trump other positioned UI pieces
+     that we want to overlay. 3 is used in the tab bar. */
+  z-index: 3;
+  height: var(--urlbar-height) !important;
 }
 
 tab:not(:active) .tab-background {
