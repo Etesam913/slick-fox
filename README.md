@@ -3,13 +3,6 @@
 <h2 align="center">A modern theme for Firefox uses slick animations to create a collapsable url bar. </h2>
 <p align="center"><img src="https://res.cloudinary.com/dz5ashos1/image/upload/v1596149211/github/slick-fox/ohbvaq0jjhgcyyz9vnim.gif"></img></p1>
 
-<h3>In Firefox 78+</h3>
-<p>You have to create the "ui.prefersReducedMotion" config in about:config and give it a value of 1 to prevent some stuttering in the animation.
-
-<h3>In Firefox 75</h3>
-<p>You have to set "browser.urlbar.openViewOnFocus", and "browser.urlbar.update1" to false in about:config to fix a bug regarding a big white urlbar. </p>
-
-
 ### Steps for applying this configuration
 <ol>
   <li>Type about:profiles into your urlbar and go to the page</li>  
@@ -21,3 +14,13 @@
   <li>Go back to about:profiles and click the restart normally buton</li>
   <li>That should be it!</li>
 </ol>
+
+
+
+<h3>In Firefox 78+</h3>
+<p>You have to create the "ui.prefersReducedMotion" config in about:config and give it a value of 1 to prevent some stuttering in the animation.
+
+<h3>In Firefox 75</h3>
+<p>You have to set "browser.urlbar.openViewOnFocus", and "browser.urlbar.update1" to false in about:config to fix a bug regarding a big white urlbar. </p>
+
+
