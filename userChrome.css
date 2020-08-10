@@ -8,6 +8,7 @@
   --urlbar-height: 32px !important;
   --urlbar-toolbar-height: 40px !important;
   --moz-hidden-unscrollable: scroll !important;
+  --toolbarbutton-border-radius: 15px !important;
 }
 
 #TabsToolbar .tabbrowser-tab,
@@ -35,6 +36,9 @@
      that we want to overlay. 3 is used in the tab bar. */
   z-index: 3;
   height: var(--urlbar-height) !important;
+}
+#urlbar-search-button{
+    margin-left: 5px;
 }
 
 tab:not(:active) .tab-background {
