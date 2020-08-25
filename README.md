@@ -1,7 +1,7 @@
 <h1 align="center">Slick-Fox</h1>
 
 <h2 align="center">A modern theme for Firefox uses slick animations to create a collapsable url bar. </h2>
-<p align="center"><img src="https://res.cloudinary.com/dz5ashos1/image/upload/v1596149211/github/slick-fox/ohbvaq0jjhgcyyz9vnim.gif"></img></p1>
+<p align="center"><img src="https://res.cloudinary.com/dz5ashos1/image/upload/v1598324310/github/slick-fox/gq6lvjd6zaylbzqounzl.gif"></img></p1>
 
 ### Steps for applying this configuration
 <ol>
