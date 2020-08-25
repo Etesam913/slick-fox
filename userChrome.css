@@ -9,6 +9,7 @@
   --urlbar-toolbar-height: 40px !important;
   --moz-hidden-unscrollable: scroll !important;
   --toolbarbutton-border-radius: 15px !important;
+  --tabs-border-color: transparent;
 }
 
 #TabsToolbar .tabbrowser-tab,
