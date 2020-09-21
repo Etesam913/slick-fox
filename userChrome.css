@@ -1,4 +1,4 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
 
 * {
   /*--tab-corner-rounding: 5px;*/
@@ -38,8 +38,8 @@
   z-index: 3;
   height: var(--urlbar-height) !important;
 }
-#urlbar-search-button{
-    margin-left: 5px;
+#urlbar-search-button {
+  margin-left: 5px;
 }
 
 tab:not(:active) .tab-background {
@@ -63,16 +63,16 @@ tab:not(:active) .tab-background {
 
 :root:not([customizing]) :hover > #tabbrowser-tabs,
 :root:not([customizing]) #tabbrowser-tabs:focus-within,
-#urlbar[focused="true"],
-#identity-box[open="true"],
+#urlbar[focused='true'],
+#identity-box[open='true'],
 #navigator-toolbox:hover > #tabbrowser-tabs:not([customizing]),
-#toolbar-menubar:not([inactive="true"]) ~ #tabbrowser-tabs:not([customizing]) {
+#toolbar-menubar:not([inactive='true']) ~ #tabbrowser-tabs:not([customizing]) {
   color: rgb(0, 0, 0) !important;
   transition: linear 0s;
   transition-delay: 3s;
 }
 
-:root[uidensity="compact"] {
+:root[uidensity='compact'] {
   --tab-min-height: 38px !important;
 }
 
@@ -84,12 +84,12 @@ tab:not([selected]):hover .tab-background {
 }
 
 .tab-close-button {
-  list-style-image: url("active_close.png");
+  list-style-image: url('active_close.png');
   border-radius: 15px;
   transition: list-style-image var(--animation-speed) ease-out !important;
 }
 .tab-close-button:hover {
-  list-style-image: url("mouseover_close.png");
+  list-style-image: url('mouseover_close.png');
 }
 
 #navigator-toolbox::after {
@@ -124,16 +124,6 @@ tab:not([selected]):hover .tab-background {
   display: none !important;
 }
 
-.urlbar-icon,
-.urlbar-icon image,
-#userContext-indicator,
-#userContext-label {
-  fill: transparent !important;
-  background-color: transparent !important;
-  color: transparent !important;
-  transition: var(--animation-speed) !important;
-}
-
 #urlbar:hover .urlbar-icon,
 #urlbar:active .urlbar-icon,
 #urlbar[focused] .urlbar-icon,
@@ -141,16 +131,6 @@ tab:not([selected]):hover .tab-background {
 #urlbar:active .urlbar-icon image,
 #urlbar[focused] .urlbar-icon image {
   fill: var(--toolbar-color) !important;
-}
-
-#urlbar:hover #userContext-indicator,
-#urlbar:active #userContext-indicator,
-#urlbar[focused] #userContext-indicator,
-#urlbar:hover #userContext-label,
-#urlbar:active #userContext-label,
-#urlbar[focused] #userContext-label {
-  color: var(--identity-tab-color) !important;
-  fill: var(--identity-tab-color) !important;
 }
 
 .urlbar-page-action[open] {
@@ -205,7 +185,7 @@ tab:not([selected]):hover .tab-background {
   margin-right: 2px !important;
 }
 
-#urlbar-container #urlbar[pageproxystate="invalid"] {
+#urlbar-container #urlbar[pageproxystate='invalid'] {
   margin-left: 5px !important;
 }
 
@@ -217,7 +197,6 @@ tab:not([selected]):hover .tab-background {
   background-color: transparent !important;
   color: var(--lwt-toolbar-field-color, black) !important;
 }
-
 
 .urlbarView {
   background: var(--toolbar-bgcolor) !important;
@@ -245,28 +224,28 @@ tab:not([selected]):hover .tab-background {
 #identity-box:hover,
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
-[anonid="urlbar-go-button"]:hover {
+[anonid='urlbar-go-button']:hover {
   border-radius: 10px !important;
 }
 
 #identity-box:active,
 .urlbar-icon:active,
 .urlbar-icon-wrapper:active,
-[anonid="urlbar-go-button"]:active {
+[anonid='urlbar-go-button']:active {
   background-color: var(--toolbarbutton-active-background) !important;
 }
 
 .urlbar-input-box,
 #identity-box,
-[anonid="urlbar-go-button"],
+[anonid='urlbar-go-button'],
 #urlbar {
   font-size: 1.3rem;
-  font-family: "Airbnb Cereal App Book", "Arial", "Helvetica";
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
   transition: background-color var(--animation-speed) !important;
   color: var(--toolbar-color) !important;
 }
 
-[lwthemetextcolor="dark"] .urlbarView-body-outer {
+[lwthemetextcolor='dark'] .urlbarView-body-outer {
   background-color: #ff5340 !important;
   color: var(--toolbar-color) !important;
 }
@@ -306,33 +285,29 @@ menucaption {
   color: black;
 }
 
-menu[disabled="true"][_moz-menuactive="false"],
-menuitem[disabled="true"][_moz-menuactive="false"],
-menucaption[disabled="true"][_moz-menuactive="false"] {
+menu[disabled='true'][_moz-menuactive='false'],
+menuitem[disabled='true'][_moz-menuactive='false'],
+menucaption[disabled='true'][_moz-menuactive='false'] {
   color: white !important;
 }
 
-menu[disabled="true"],
-menuitem[disabled="true"],
-menucaption[disabled="true"] {
+menu[disabled='true'],
+menuitem[disabled='true'],
+menucaption[disabled='true'] {
   color: var(
     --toolbarbutton-hover-background,
     rgba(182, 182, 182, 0.11)
   ) !important;
 }
 
-menu[disabled="true"][_moz-menuactive="true"],
-menuitem[disabled="true"][_moz-menuactive="true"],
-menucaption[disabled="true"][_moz-menuactive="true"] {
+menu[disabled='true'][_moz-menuactive='true'],
+menuitem[disabled='true'][_moz-menuactive='true'],
+menucaption[disabled='true'][_moz-menuactive='true'] {
   color: var(
     --toolbarbutton-hover-background,
     rgba(182, 182, 182, 0.11)
   ) !important;
   background-color: transparent !important;
-}
-
-menupopup .popup-internal-box {
-  background-color: #whitesmoke !important;
 }
 
 menu,
@@ -409,8 +384,8 @@ menu:not(.subviewbutton) > .menu-right image {
   }
 }
 
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
+.titlebar-spacer[type='pre-tabs'],
+.titlebar-spacer[type='post-tabs'] {
   display: none !important;
 }
 
@@ -436,7 +411,7 @@ menu:not(.subviewbutton) > .menu-right image {
   display: none !important;
 }
 
-.tab-background[selected="true"] {
+.tab-background[selected='true'] {
   color: #111111 !important;
 }
 
@@ -448,11 +423,19 @@ menu:not(.subviewbutton) > .menu-right image {
 .tab-icon-image {
 }
 .tab-label {
-  font-family: "Airbnb Cereal App Book", "Arial", "Helvetica";
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
 }
-.tabbrowser-tab[selected="true"],
-.tab-label-container[selected="true"] {
+.tabbrowser-tab[selected='true'],
+.tab-label-container[selected='true'] {
   font-size: 1.1rem;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 menubar,
@@ -479,10 +462,10 @@ tree,
 
 :root:not([customizing]) :hover > #nav-bar,
 #nav-bar:focus-within,
-#urlbar[focused="true"],
-#identity-box[open="true"],
+#urlbar[focused='true'],
+#identity-box[open='true'],
 #navigator-toolbox:hover > #nav-bar:not([customizing]),
-#toolbar-menubar:not([inactive="true"]) ~ #nav-bar:not([customizing]) {
+#toolbar-menubar:not([inactive='true']) ~ #nav-bar:not([customizing]) {
   visibility: visible;
 
   margin-top: 0px;
@@ -493,7 +476,7 @@ tree,
 #PersonalToolbar {
   margin-top: 0px;
 }
-#nav-bar .toolbarbutton-1[open="true"] {
+#nav-bar .toolbarbutton-1[open='true'] {
   visibility: visible;
   opacity: 100;
 }
@@ -503,4 +486,133 @@ tree,
   overflow-y: scroll;
   margin-bottom: 0px !important;
   overflow-x: scroll;
+}
+
+/*tooltip*/
+#tabbrowser-tab-tooltip {
+  -moz-appearance: none !important;
+  font-size: 1.4rem !important;
+  width: 170px !important;
+  height: auto;
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
+  font-weight: normal !important;
+  color: var(--lwt-tab-text) !important;
+  background-color: var(--toolbar-bgcolor) !important;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+menupopup {
+  -moz-appearance: none !important;
+  padding: 8px !important;
+  border-radius: 15px !important;
+  background-color: var(--toolbar-bgcolor) !important;
+  border: none !important;
+  min-width: 280px !important;
+}
+menuseparator {
+  -moz-appearance: none !important;
+  border: none !important;
+  background-color: none !important;
+}
+menuitem,
+menu {
+  -moz-appearance: none !important;
+  color: var(--lwt-tab-text) !important;
+  padding: 7.5px 6px !important;
+}
+menuitem[disabled='true'],
+menuitem[disabled='true'] > .menu-text {
+  color: gray !important;
+}
+menuitem:hover,
+menu:hover,
+menu[open='true'],
+menuitem[_moz-menuactive='true'] {
+  -moz-appearance: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+  filter: brightness(150%);
+  border-radius: 5px;
+}
+menugroup {
+  padding: 0px !important;
+  background-color: transparent !important;
+}
+menuitem > .menu-text,
+menuitem > .menu-iconic-text {
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
+}
+menuitem[type='checkbox'] {
+  padding-left: 8px !important;
+  padding-top: 6.5px !important;
+  padding-bottom: 6.5px !important;
+}
+menuitem[type='radio'] {
+  padding-left: 8px !important;
+  padding-top: 6.5px !important;
+  padding-bottom: 6.5px !important;
+}
+menuitem[type='checkbox'] > .menu-iconic-text,
+menuitem[type='radio'] > .menu-iconic-text {
+  padding-left: 5px !important;
+}
+menuitem[checked='true'][type='checkbox'] > .menu-iconic-left {
+  padding: 7px 0px 0px 0px !important;
+  border: solid white;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg) scale(0.75);
+  margin-bottom: 4px !important;
+}
+menuitem[checked='true'][type='radio'] > .menu-iconic-left {
+  padding: 1px !important;
+  border: solid white;
+  height: 17px !important;
+  border-radius: 100%;
+  background: white;
+  transform: scale(0.5);
+}
+menucaption {
+  background-color: transparent !important;
+  color: white !important;
+}
+#ContentSelectDropdown > menupopup {
+  background-image: none !important;
+}
+#ContentSelectDropdown {
+  padding: 0px !important;
+}
+menulist {
+  -moz-appearance: none !important;
+  padding: 4px 4px 4px 4px !important;
+  border: 2px solid #666666 !important;
+  background-color: transparent !important;
+}
+menulist:hover {
+  padding: 4px 4px 4px 4px !important;
+  border: 2px solid #999999 !important;
+  background-color: transparent !important;
+}
+menulist[open='true'] {
+  border: 2px solid #666666 !important;
+  background-color: #333333 !important;
+}
+#context-back > .menu-iconic-left,
+#context-forward > .menu-iconic-left,
+#context-reload > .menu-iconic-left,
+#context-stop > .menu-iconic-left,
+#context-bookmarkpage > .menu-iconic-left {
+  transform: scale(1.8);
+}
+.menu-iconic-left {
+  -moz-appearance: none !important;
+  padding: 0px 5px 0px 9px !important;
+}
+.menu-right {
+  -moz-appearance: none !important;
+  padding: 7.5px !important;
+  margin-right: 6px !important;
+  color: white !important;
+  border: solid white;
+  border-width: 0 2px 2px 0px;
+  transform: rotate(-45deg) scale(0.55);
 }
