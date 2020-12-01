@@ -482,7 +482,6 @@ tree,
 }
 
 :-moz-any(#content, #appcontent) browser {
-  margin-right: -17px !important;
   overflow-y: scroll;
   margin-bottom: 0px !important;
   overflow-x: scroll;
