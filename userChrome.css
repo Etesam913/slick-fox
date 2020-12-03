@@ -109,6 +109,8 @@ tab:not([selected]):hover .tab-background {
   padding-top: 10px !important;
 }
 
+
+
 #urlbar {
   /*border-radius: calc(1px + var(--button-corner-rounding)) !important;*/
   height: 30px;
@@ -117,7 +119,6 @@ tab:not([selected]):hover .tab-background {
 
 #urlbar-container *:not(#identity-box) {
   border-color: transparent !important;
-  box-shadow: none !important;
 }
 
 #pageActionSeparator {
@@ -184,6 +185,9 @@ tab:not([selected]):hover .tab-background {
   margin-left: -5px !important;
   margin-right: 2px !important;
 }
+.urlbar-input::-moz-selection {
+  background-color: red !important;
+}
 
 #urlbar-container #urlbar[pageproxystate='invalid'] {
   margin-left: 5px !important;
@@ -199,10 +203,13 @@ tab:not([selected]):hover .tab-background {
 }
 
 .urlbarView {
-  background: var(--toolbar-bgcolor) !important;
+  /*   background: var(--toolbar-bgcolor) !important;
+  opacity: 1 !important; */
+  background: var(--lwt-toolbar-field-focus) !important;
   color: var(--toolbar-color) !important;
   border-bottom-left-radius: 15px !important;
   border-bottom-right-radius: 15px !important;
+  box-shadow: 10px 45px 146px -64px rgba(0, 0, 0, 0.65);
 }
 
 #pocket-button {
@@ -505,7 +512,8 @@ menupopup {
   -moz-appearance: none !important;
   padding: 8px !important;
   border-radius: 15px !important;
-  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--lwt-tab-text) !important;
+  background: var(--lwt-toolbar-field-focus) !important;
   border: none !important;
   min-width: 280px !important;
 }
@@ -530,7 +538,7 @@ menu[open='true'],
 menuitem[_moz-menuactive='true'] {
   -moz-appearance: none !important;
   background-color: var(--toolbar-bgcolor) !important;
-  filter: brightness(150%);
+  filter: brightness(200%);
   border-radius: 5px;
 }
 menugroup {
