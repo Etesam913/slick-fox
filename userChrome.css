@@ -46,29 +46,16 @@ tab:not(:active) .tab-background {
   transition: background-color var(--animation-speed) !important;
 }
 :root:not([customizing]) :hover > .tabbrowser-tab:not(:hover) {
-  /*filter: blur(3px) brightness(50%);*/
   transition: blur, ease 0.5s !important;
 }
 
 :root:not([customizing]) :not(:hover) > .tabbrowser-tab {
-  /*filter: blur(0px) brightness(100%) !important;*/
   transition: blur, ease 0.2s !important;
 }
 
 #tabbrowser-tabs .tab-label-container[customizing] {
   color: transparent;
   transition: ease 0.5s;
-  transition-delay: 3s;
-}
-
-:root:not([customizing]) :hover > #tabbrowser-tabs,
-:root:not([customizing]) #tabbrowser-tabs:focus-within,
-#urlbar[focused='true'],
-#identity-box[open='true'],
-#navigator-toolbox:hover > #tabbrowser-tabs:not([customizing]),
-#toolbar-menubar:not([inactive='true']) ~ #tabbrowser-tabs:not([customizing]) {
-  color: rgb(0, 0, 0) !important;
-  transition: linear 0s;
   transition-delay: 3s;
 }
 
@@ -108,8 +95,6 @@ tab:not([selected]):hover .tab-background {
   padding-right: 15px !important;
   padding-top: 10px !important;
 }
-
-
 
 #urlbar {
   /*border-radius: calc(1px + var(--button-corner-rounding)) !important;*/
