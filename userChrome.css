@@ -493,11 +493,21 @@ tree,
   border-radius: 10px;
   box-shadow: none !important;
 }
+#bookmarksPanel {
+  --lwt-toolbar-field-focus: white !important;
+  --lwt-tab-text: black !important;
+}
+
+window#places[title='Library'] {
+  --lwt-toolbar-field-focus: white !important;
+  --lwt-tab-text: black !important;
+}
 menupopup {
   -moz-appearance: none !important;
   padding: 8px !important;
   border-radius: 15px !important;
   color: var(--lwt-tab-text) !important;
+  background: red !important;
   background: var(--lwt-toolbar-field-focus) !important;
   border: none !important;
   min-width: 280px !important;
