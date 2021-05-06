@@ -4,12 +4,11 @@
   /*--tab-corner-rounding: 5px;*/
   --animation-speed: 0.4s;
   --button-corner-rounding: 30px;
-  --urlbar-container-height: 40px !important;
-  --urlbar-min-height: 30px !important;
-  --urlbar-height: 30px !important;
-  --urlbar-toolbar-height: 38px !important;
+  --urlbar-container-height: 34px !important;
+  --urlbar-height: 32px !important;
+  --urlbar-toolbar-height: 40px !important;
   --moz-hidden-unscrollable: scroll !important;
-  --toolbarbutton-border-radius: 3px !important;
+  --toolbarbutton-border-radius: 15px !important;
   --tabs-border-color: transparent;
 }
 
@@ -19,32 +18,9 @@
 #TabsToolbar .tabbrowser-tab .tab-content {
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
   margin-top: 0px;
-  max-height: 36px !important;
+  height: 36px;
   text-align: center;
-}
-
-#TabsToolbar:not([brighttext])
-  #tabbrowser-tabs:not([noshadowfortests])
-  .tabbrowser-tab:is([visuallyselected='true'], [multiselected])
-  > .tab-stack
-  > .tab-background {
-  box-shadow: none !important;
-}
-
-.tab-background,
-.tab-stack {
-  min-height: 36px !important;
-}
-
-.tab-background {
-  margin-block: 0 0 !important;
-}
-
-.tabbrowser-tab {
-  min-height: 36px !important;
 }
 
 #TabsToolbar:hover {
@@ -159,14 +135,13 @@ tab:not([selected]):hover .tab-background {
 }
 
 #urlbar[breakout][breakout-extend] {
-  top: 3px !important;
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
   left: 0 !important;
   width: 100% !important;
 }
 
-#urlbar[breakout] {
-  top: 4.9px !important;
-}
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
   height: 100% !important;
   padding-block: 0 !important;
@@ -220,17 +195,6 @@ tab:not([selected]):hover .tab-background {
   border-bottom-left-radius: 15px !important;
   border-bottom-right-radius: 15px !important;
   box-shadow: 10px 45px 146px -64px rgba(0, 0, 0, 0.65);
-  margin-inline: 0 !important;
-  width: 100% !important;
-}
-
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-text,
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
-  border-radius: 50rem !important;
-  height: 2rem !important;
-  width: 2rem !important;
-  padding: 4px !important;
 }
 
 #pocket-button {
@@ -247,7 +211,7 @@ tab:not([selected]):hover .tab-background {
 }
 
 #urlbar:not([focused]) {
-  border-radius: 4px !important;
+  border-radius: 20px !important;
 }
 #identity-box:hover,
 .urlbar-icon:hover,
@@ -268,6 +232,7 @@ tab:not([selected]):hover .tab-background {
 [anonid='urlbar-go-button'],
 #urlbar {
   font-size: 1.3rem;
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
   transition: background-color var(--animation-speed) !important;
   color: var(--toolbar-color) !important;
 }
@@ -433,11 +398,6 @@ menu:not(.subviewbutton) > .menu-right image {
   margin-left: 4px !important;
   border-radius: 100% !important;
 }
-
-.urlbarView-results{
-  padding: 0 6px !important;
-}
-
 .tabbrowser-tab::before,
 .tabbrowser-tab::after {
   display: none !important;
@@ -451,8 +411,11 @@ menu:not(.subviewbutton) > .menu-right image {
   text-align: center !important;
   justify-content: center;
   align-items: center;
-  margin: 6px 0 0 0 !important;
-  padding-inline: 0 !important;
+}
+.tab-icon-image {
+}
+.tab-label {
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
 }
 .tabbrowser-tab[selected='true'],
 .tab-label-container[selected='true'] {
@@ -488,10 +451,6 @@ tree,
   transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s,
     rotate, ease 0.4s !important;
 }
-toolbarbutton{
-  padding: 2px !important;
-}
-
 
 :root:not([customizing]) :hover > #nav-bar,
 #nav-bar:focus-within,
@@ -526,6 +485,7 @@ toolbarbutton{
   font-size: 1.4rem !important;
   width: 170px !important;
   height: auto;
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
   font-weight: normal !important;
   color: var(--lwt-tab-text) !important;
   background-color: var(--toolbar-bgcolor) !important;
@@ -579,6 +539,10 @@ menuitem[_moz-menuactive='true'] {
 menugroup {
   padding: 0px !important;
   background-color: transparent !important;
+}
+menuitem > .menu-text,
+menuitem > .menu-iconic-text {
+  font-family: 'Airbnb Cereal App Book', 'Arial', 'Helvetica';
 }
 menuitem[type='checkbox'] {
   padding-left: 8px !important;
