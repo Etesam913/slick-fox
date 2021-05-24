@@ -1,8 +1,8 @@
 <h1 align="center">Slick-Fox</h1>
 
 <h2 align="center">A modern theme for Firefox uses slick animations </h2>
-<p align="center"><img src="https://etesam.nyc3.digitaloceanspaces.com/Personal-Website/slick-fox.gif"></img></p1>
 
+https://user-images.githubusercontent.com/55665282/119282710-b194a080-bc08-11eb-8280-0b8ba16d0d6a.mp4
 
 ### Steps for applying this configuration
 <ol>
