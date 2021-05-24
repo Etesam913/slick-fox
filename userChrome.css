@@ -107,13 +107,6 @@ tab:not([selected]):hover .tab-background {
   display: none !important;
 }
 
-.titlebar-button > .toolbarbutton-icon {
-  height: 17px !important;
-  min-height: 17px !important;
-  width: 17px !important;
-  min-width: 17px !important;
-}
-
 .titlebar-button {
   padding-left: 10px !important;
   padding-right: 15px !important;
@@ -488,16 +481,16 @@ tree,
   transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s,
     rotate, ease 0.4s !important;
 }
-toolbarbutton{
-  padding: 2px !important;
+#tabs-newtab-button{
+  padding: 0.75rem 0.2rem 0.2rem 0.2rem !important;
 }
 
 
-:root:not([customizing]) :hover > #nav-bar,
+#nav-bar:hover,
 #nav-bar:focus-within,
 #urlbar[focused='true'],
 #identity-box[open='true'],
-#navigator-toolbox:hover > #nav-bar:not([customizing]),
+#titlebar:hover + #nav-bar:not([customizing]),
 #toolbar-menubar:not([inactive='true']) ~ #nav-bar:not([customizing]) {
   visibility: visible;
 
