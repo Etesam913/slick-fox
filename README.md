@@ -2,7 +2,9 @@
 
 <h2 align="center">A modern theme for Firefox uses slick animations </h2>
 
-https://user-images.githubusercontent.com/55665282/119282710-b194a080-bc08-11eb-8280-0b8ba16d0d6a.mp4
+
+https://user-images.githubusercontent.com/55665282/120853569-e29a9c80-c549-11eb-8f7c-ab9d3975798b.mp4
+
 
 ### Steps for applying this configuration
 <ol>
