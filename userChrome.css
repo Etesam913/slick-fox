@@ -27,10 +27,10 @@
 }
 
 #TabsToolbar:not([brighttext])
-  #tabbrowser-tabs:not([noshadowfortests])
-  .tabbrowser-tab:is([visuallyselected='true'], [multiselected])
-  > .tab-stack
-  > .tab-background {
+#tabbrowser-tabs:not([noshadowfortests])
+.tabbrowser-tab:is([visuallyselected='true'], [multiselected])
+> .tab-stack
+> .tab-background {
   box-shadow: none !important;
 }
 
@@ -89,8 +89,8 @@ tab:not(:active) .tab-background {
 
 tab:not([selected]):hover .tab-background {
   background-color: var(
-    --toolbarbutton-hover-background,
-    rgba(182, 182, 182, 0.11)
+          --toolbarbutton-hover-background,
+          rgba(182, 182, 182, 0.11)
   ) !important;
 }
 
@@ -206,10 +206,7 @@ tab:not([selected]):hover .tab-background {
 } */
 
 .urlbarView {
-  /*   background: var(--toolbar-bgcolor) !important;
-  opacity: 1 !important; */
-  background: var(--lwt-toolbar-field-focus) !important;
-  /* color: var(--toolbar-color) !important; */
+  background: var(--toolbar-field-focus-background-color) !important;
   border-bottom-left-radius: 15px !important;
   border-bottom-right-radius: 15px !important;
   box-shadow: 10px 45px 146px -64px rgba(0, 0, 0, 0.65);
@@ -305,8 +302,8 @@ menu[disabled='true'],
 menuitem[disabled='true'],
 menucaption[disabled='true'] {
   color: var(
-    --toolbarbutton-hover-background,
-    rgba(182, 182, 182, 0.11)
+          --toolbarbutton-hover-background,
+          rgba(182, 182, 182, 0.11)
   ) !important;
 }
 
@@ -314,8 +311,8 @@ menu[disabled='true'][_moz-menuactive='true'],
 menuitem[disabled='true'][_moz-menuactive='true'],
 menucaption[disabled='true'][_moz-menuactive='true'] {
   color: var(
-    --toolbarbutton-hover-background,
-    rgba(182, 182, 182, 0.11)
+          --toolbarbutton-hover-background,
+          rgba(182, 182, 182, 0.11)
   ) !important;
   background-color: transparent !important;
 }
@@ -336,10 +333,10 @@ menu:not(.subviewbutton) > .menu-right image {
 }
 
 @media (-moz-os-version: windows-xp),
-  (-moz-os-version: windows-vista),
-  (-moz-os-version: windows-win7),
-  (-moz-os-version: windows-win8),
-  (-moz-os-version: windows-win10) {
+(-moz-os-version: windows-vista),
+(-moz-os-version: windows-win7),
+(-moz-os-version: windows-win8),
+(-moz-os-version: windows-win10) {
   menupopup .popup-internal-box {
     margin: -2px !important;
     padding-bottom: 3px !important;
@@ -410,10 +407,6 @@ menu:not(.subviewbutton) > .menu-right image {
   border-radius: 100% !important;
 }
 
-.urlbarView-results {
-  padding: 0 6px !important;
-}
-
 .tabbrowser-tab::before,
 .tabbrowser-tab::after {
   display: none !important;
@@ -450,7 +443,7 @@ menu:not(.subviewbutton) > .menu-right image {
   filter: alpha(opacity=0);
   opacity: 0;
   transition: visibility, ease 0.5s, margin-top, ease 0.5s, opacity, ease 0.5s,
-    rotate, ease 0.4s !important;
+  rotate, ease 0.4s !important;
 }
 #tabs-newtab-button {
   padding: 0.75rem 0.2rem 0.2rem 0.2rem !important;
@@ -510,7 +503,7 @@ menupopup {
   padding: 8px !important;
   border-radius: 15px !important;
   background: red !important;
-  background: var(--lwt-toolbar-field-focus) !important;
+  background: var(--toolbar-field-focus-background-color) !important;
   border: none !important;
   min-width: 280px !important;
 }
